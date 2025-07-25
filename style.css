@@ -1,0 +1,71 @@
+/* Additional styling */
+.attendance-present {
+    color: green;
+    font-weight: bold;
+}
+
+.attendance-absent {
+    color: red;
+    font-weight: bold;
+}
+
+.card {
+    margin-bottom: 20px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.table-responsive {
+    overflow-x: auto;
+}
+
+.badge {
+    font-size: 0.9em;
+    padding: 5px 10px;
+}
+
+.btn-sm {
+    padding: 0.25rem 0.5rem;
+    font-size: 0.875rem;
+}
+
+/* Scrollable content for 1024px and below */
+@media (max-width: 1024px) {
+    #mainContent {
+        overflow-x: auto;
+        -webkit-overflow-scrolling: touch;
+    }
+    
+    .table-responsive {
+        min-width: 100%;
+    }
+    
+    .card {
+        min-width: 100%;
+    }
+    
+    /* Ensure tables and cards don't overflow */
+    table {
+        width: 100%;
+        max-width: 100%;
+    }
+}
+
+/* Print styles for payslip */
+@media print {
+    body * {
+        visibility: hidden;
+    }
+    .payslip-container, .payslip-container * {
+        visibility: visible;
+    }
+    .payslip-container {
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 100%;
+        border: none;
+    }
+    .no-print {
+        display: none !important;
+    }
+}
